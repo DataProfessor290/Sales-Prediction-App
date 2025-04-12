@@ -99,7 +99,7 @@ if submit:
     for i, (name, pipe) in enumerate(model_pipes.items()):
         with tabs[i]:
             prediction = pipe.predict(input_data)[0]
-            st.metric(label="Predicted Sales", value=f"${prediction:,.2f}")
+            st.metric(label="Predicted Sales", value=f"N{prediction:,.2f}")
 
             # Optional: model evaluation on test data
             test_pred = pipe.predict(x_test)
@@ -109,5 +109,5 @@ if submit:
 
             st.write("Model Evaluation:")
             st.write(f"**R² Score**: {r2:.3f}")
-            st.write(f"**MAE**: ${mae:,.2f}")
+            st.write(f"**MAE**: N{mae:,.2f}")
             st.write(f"**MAPE**: {mape:.2%}")
