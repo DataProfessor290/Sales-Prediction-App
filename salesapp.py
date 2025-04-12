@@ -18,8 +18,8 @@ df = pd.read_csv("data.csv")
 df.sale_date = pd.to_datetime(df.sale_date)
 
 # Feature selection and renaming
-df = df[['quantity','total_price','payment_method','day_of_week','price','gender','age']]
-df = df.rename(columns={'total_price':'sales', 'payment_method': 'payment', 'day_of_week':'day'})
+df = df[['quantity', 'total_price', 'payment_method', 'day_of_week', 'price', 'gender', 'age']]
+df = df.rename(columns={'total_price': 'sales', 'payment_method': 'payment', 'day_of_week': 'day'})
 
 # Split numeric and categorical columns
 def split_data(data):
@@ -71,12 +71,15 @@ for pipe in model_pipes.values():
 st.title("Sales Prediction App")
 st.subheader("Enter Customer Details")
 
+# Day of week in proper order
+days_order = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+
 # Form for prediction input
 with st.form("prediction_form"):
     quantity = st.number_input("Quantity", min_value=1, value=1)
     price = st.number_input("Price", min_value=0.0, value=10.0)
     payment = st.selectbox("Payment Method", df['payment'].unique())
-    day = st.selectbox("Day of Week", df['day'].unique())
+    day = st.selectbox("Day of Week", days_order)
     gender = st.selectbox("Gender", df['gender'].unique())
     age = st.number_input("Age", min_value=10, max_value=100, value=30)
     submit = st.form_submit_button("Predict")
