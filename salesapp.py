@@ -74,7 +74,7 @@ for pipe in model_pipes.values():
 # =============================
 # 🌟 Streamlit UI
 # =============================
-st.set_page_config(page_title="🛍️ Sales Prediction App", layout="wide")
+st.set_page_config(page_title="🛍️ Resturant Sales Predictor", layout="wide")
 st.title("🛍️ Sales Prediction Web App")
 st.markdown("Use this app to predict customer purchase amounts based on behavior and demographic data.")
 
@@ -137,7 +137,8 @@ st.markdown(
         Created by <strong>Tolulope Emuleomo</strong> aka <strong>Data Professor</strong> 🧠<br>
         Connect: 
         <a href="https://twitter.com/dataprofessor_" target="_blank" style="color:#1DA1F2;">Twitter</a> | 
-        <a href="https://github.com/dataprofessor290" target="_blank" style="color:#6e5494;">GitHub</a>
+        <a href="https://github.com/dataprofessor290" target="_blank" style="color:#6e5494;">GitHub</a> |
+        <a href="https://www.linkedin.com/in/tolulope-emuleomo-77a231270/" target="_blank" style="color:#0072b1;">LinkedIn</a>
     </div>
     """,
     unsafe_allow_html=True
