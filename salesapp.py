@@ -75,7 +75,7 @@ for pipe in model_pipes.values():
 # 🌟 Streamlit UI
 # =============================
 st.set_page_config(page_title="🛍️ Resturant Sales Predictor", layout="wide")
-st.title("🛍️ Sales Prediction Web App")
+st.title("🛍️ Resturant Sales Predictor")
 st.markdown("Use this app to predict customer purchase amounts based on behavior and demographic data.")
 
 st.markdown("### 📝 Enter Customer Details")
